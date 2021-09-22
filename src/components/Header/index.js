@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Nav(props) {
+function Header(props) {
 
   return (
     <header>
@@ -26,4 +26,4 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default Header;

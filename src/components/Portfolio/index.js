@@ -5,7 +5,15 @@ function Portfolio(props) {
 
   return (
     <div id="portfolio-section">
-      <Project />
+      <h2>Portfolio</h2>
+      <div id="project-holder">
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+      </div>
     </div>
   );
 }

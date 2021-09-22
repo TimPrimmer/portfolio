@@ -1,8 +1,14 @@
 :root {
   --test-image: url(./assets/imgs/mordhau.png);
+  --cool-grey: #8693abff;
+  --beau-blue: #bdd4e7ff;
+  --raisin-black: #212227ff;
+  --cadet: #637074ff;
+  --light-steel-blue: #aab9cfff;
 }
 
-*{ /* removes a lot of unnecessary padding and margins */
+* {
+  /* removes a lot of unnecessary padding and margins */
   margin: 0;
   padding: 0;
 }
@@ -10,13 +16,14 @@
 a, a:visited, a:hover, a:active {
   color: inherit;
   text-decoration: none;
-} 
+}
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--raisin-black);
 }
 
 code {
@@ -26,6 +33,26 @@ code {
 header {
   display: flex;
   align-items: center;
+  background-color: var(--raisin-black);
+  height: 75px;
+  color: var(--beau-blue);
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: var(--beau-blue);
+  background-color: var(--raisin-black);
+  height: 50px;
+  position: relative;
+  clear: both;
+}
+
+footer div {
+  font-weight: bolder;
 }
 
 h1 {
@@ -35,6 +62,10 @@ h1 {
 
 nav {
   width: 75%;
+}
+
+#main-section {
+  background-color: var(--beau-blue);
 }
 
 #main-nav {
@@ -51,21 +82,30 @@ nav {
 }
 
 #portfolio-section {
+  padding: 10px 30px 10px 30px;
+}
 
+#portfolio-section h2 {
+  color: var(--raisin-black);
+  padding-top: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  font-size: 30px;
 }
 
 h3 {
   text-align: center;
   font-size: 3vw;
-  color: white;
+  color: var(--beau-blue);
 }
 
 .project-box {
-  width: 35vw;
+  width: 40vw;
   height: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .proj-details {
@@ -81,7 +121,8 @@ h3 {
 .link-details {
   display: flex;
   justify-content: space-around;
-  color: white;
+  color: var(--beau-blue);
+  ;
 }
 
 .link-details a {
@@ -100,7 +141,13 @@ h3 {
   background-image: var(--test-image);
   background-size: cover;
   background-position: center;
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+#project-holder {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .project-img {
@@ -108,4 +155,3 @@ h3 {
   height: auto;
   border-radius: 8px;
 }
-
