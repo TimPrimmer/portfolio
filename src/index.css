@@ -47,8 +47,6 @@ footer {
   color: var(--beau-blue);
   background-color: var(--raisin-black);
   height: 50px;
-  position: relative;
-  clear: both;
 }
 
 footer div {
@@ -154,4 +152,16 @@ h3 {
   max-width: 20%;
   height: auto;
   border-radius: 8px;
+}
+
+#about-section {
+  height: 500px;
+}
+
+#contact-section {
+  height: 500px;
+}
+
+#resume-section {
+  height: 500px;
 }
