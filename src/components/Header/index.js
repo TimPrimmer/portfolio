@@ -1,7 +1,6 @@
 import React from 'react';
 
 
-
 function Nav(props) {
 
   return (
@@ -10,16 +9,16 @@ function Nav(props) {
       <nav>
         <ul id="main-nav">
           <li>
-            <h2>About Me</h2>
+            <h2><a href="./">About Me</a></h2>
           </li>
           <li>
-            <h2>Portfolio</h2>
+            <h2><a href="./">Portfolio</a></h2>
           </li>
           <li>
-            <h2>Contact</h2>
+            <h2><a href="./">Contact</a></h2>
           </li>
           <li>
-            <h2>Resume</h2>
+            <h2><a href="./">Resume</a></h2>
           </li>
         </ul>
       </nav>
