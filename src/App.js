@@ -27,6 +27,7 @@ function App() {
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       />
+      <div class="spacer"></div>
       <section id="main-section">
         {(() => {
           switch (currentCategory.name) {
