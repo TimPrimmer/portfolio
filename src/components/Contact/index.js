@@ -31,7 +31,7 @@ function Contact(props) {
         </div>
 
         <div class="form-block">
-          <button type="submit">Send Message</button>
+          <button type="submit" id="contact-button">Send Message</button>
         </div>
 
       </form>
