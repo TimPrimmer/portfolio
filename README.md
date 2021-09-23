@@ -18,7 +18,7 @@ My portfolio website remade in react so I showoff my work and potentially get hi
 
 ## Usage 
 
-Go to https://boiling-springs-96272.herokuapp.com/
+Go to https://timprimmer.github.io/portfolio/#portfolio-section
 
 ## License 
 
