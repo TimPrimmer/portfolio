@@ -10,10 +10,10 @@ const projects = [
     image: "./imgs/parktime.png"
   },
   {
-    title: "Social Network API",
-    link: "https://github.com/TimPrimmer/social-network",
-    github: "https://github.com/TimPrimmer/social-network",
-    image: "./imgs/social.png"
+    title: "Budget Tracker (PWA)",
+    link: "https://boiling-springs-96272.herokuapp.com/",
+    github: "https://github.com/TimPrimmer/budget-tracker",
+    image: "./imgs/budget.png"
   },
   {
     title: "Note Taker",
