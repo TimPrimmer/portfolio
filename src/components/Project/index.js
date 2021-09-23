@@ -6,18 +6,21 @@ function Project(props) {
     title,
     link,
     github,
-    image
+    image,
+    description
   } = props.details;
 
 
   return (
     <div className="project-box" style={{ backgroundImage: 'url(' + image + ')' }}>
       <div className="proj-details">
-        <h3>{title}</h3>
-        <div className="link-details">
-          <a href={link} target="_blank">Visit</a>
-          <a href={github} target="_blank">Github</a>
+        <div className="proj-info-box">
+          <h3><a href={link} target="_blank" className="project-title-text">{title}</a></h3>
+          <a href={github} target="_blank" className="project-icon-link">
+            <img className="icon project-icon" src="./imgs/github.svg" title="Github Logo" alt="Link to Project GitHub" />
+            </a>
         </div>
+        <p className="project-text">{description}</p>
       </div>
     </div>
   );

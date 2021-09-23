@@ -79,7 +79,13 @@ function Resume(props) {
                 <p>3ds Max</p>
               </li>
               <li>
-                <p>QA</p>
+                <p>&#8205; </p>
+              </li>
+              <li>
+                <p>&#8205; </p>
+              </li>
+              <li>
+                <p>&#8205; </p>
               </li>
             </ul>
           </div>
@@ -87,7 +93,7 @@ function Resume(props) {
       </div>
       <div id="resume-holder">
         <h2>My Resume</h2>
-        <iframe id="resume-iframe" src={`${MyResume}`} title="My resume in pdf format" height="650px" width="100%" zoom="50%" />
+        <iframe id="resume-iframe" src={`${MyResume}#toolbar=0`} title="My resume in pdf format" height="650px" width="100%" />
       </div>
     </div >
   );

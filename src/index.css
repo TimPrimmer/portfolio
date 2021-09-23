@@ -65,8 +65,11 @@ footer {
 
 .icon {
   width: 50px;
-  color: white;
-  fill: white;
+  transition: all ease-in-out 0.1s;
+}
+
+footer {
+  height: 100%;
 }
 
 footer div {
@@ -121,18 +124,19 @@ nav {
 #portfolio-section h2, #about-section h2, #contact-section h2, #resume-section h2 {
   padding-top: 5px;
   padding-bottom: 20px;
-  font-size: 30px;
+  font-weight: 500;
+  font-size: 40px;
   color: var(--light-shades);
 }
 
-#about-section h2 {
+#about-section h2, #contact-section h2 {
   margin-top: 3vw;
 }
 
-h3 {
+.project-title-text {
   text-align: center;
   font-size: 3vw;
-  color: var(--main);
+  color: var(--main) !important;
 }
 
 .spacer {
@@ -160,20 +164,42 @@ h3 {
   opacity: 1;
 }
 
-.link-details {
-  display: flex;
-  justify-content: space-around;
-  color: var(--secondary);
+h3 a {
+  text-align: center;
+  font-size: 3vw;
+  color: var(--dark-shades) !important;
 }
 
-.link-details a {
+.project-text {
   text-align: center;
   font-size: 2vw;
   color: var(--main);
 }
 
-.link-details a:hover {
-  color: var(--light-accent);
+.project-icon {
+  width: 3vw;
+  height: 100%;
+  margin-left: 10px;
+  filter: brightness(0) saturate(100%) invert(7%) sepia(7%) saturate(5727%) hue-rotate(188deg) brightness(96%) contrast(90%);
+}
+
+.proj-info-box {
+  width: 100%
+}
+
+.icon:hover, .project-icon-link:hover, .project-title-text:hover {
+  filter: brightness(0) saturate(100%) invert(51%) sepia(12%) saturate(637%) hue-rotate(172deg) brightness(94%) contrast(90%);
+}
+
+.proj-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.proj-details div {
+  display: flex;
+  justify-content: center;
 }
 
 .project-box {
@@ -206,7 +232,7 @@ h3 {
 }
 
 #about-section {
-  height: 740px;
+  height: 800px;
 }
 
 #about-text {
@@ -221,11 +247,11 @@ h3 {
 }
 
 #contact-section {
-  height: 500px;
+  height: 800px;
 }
 
 #resume-section {
-  height: 740px;
+  height: 800px;
   display: flex;
   justify-content: space-around;
 }
@@ -258,16 +284,43 @@ h3 {
 
 #qual-info {
   margin-left: 20px;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
   height: 100%;
+}
+
+#contact-form {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .qual-container {
   margin: 10px;
 }
 
-#resume-iframe {
-
+.form-block {
+  margin-top: 10px;
 }
+
+.form-text {
+  color: var(--light-shades);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.form-field textarea, input {
+  margin-top: 2px;
+  width: 40%;
+  min-width: 200px;
+  max-width: 40%;
+  max-height: 400px;
+}
+
+.form-field textarea {
+  min-height: 200px;
+}
+
+#resume-iframe {}
