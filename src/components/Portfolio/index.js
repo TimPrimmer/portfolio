@@ -11,6 +11,13 @@ const projects = [
     description: "Node, Express, mySQL, Handlebars"
   },
   {
+    title: "Pet Plan-it",
+    link: "https://enigmatic-temple-75821.herokuapp.com/",
+    github: "https://github.com/dpbam/pet-social-network",
+    image: "./imgs/petplanit.png",
+    description: "Node, Express, GraphQL, React, Apollo, ImgurAPI"
+  },
+  {
     title: "Budget Tracker",
     link: "https://boiling-springs-96272.herokuapp.com/",
     github: "https://github.com/TimPrimmer/budget-tracker",
@@ -23,13 +30,6 @@ const projects = [
     github: "https://github.com/TimPrimmer/note-taker",
     image: "./imgs/notetaker.png",
     description: "Express, Node"
-  },
-  {
-    title: "Readme Generator",
-    link: "https://github.com/TimPrimmer/readme-generator",
-    github: "https://github.com/TimPrimmer/readme-generator",
-    image: "./imgs/readme.png",
-    description: "Node"
   },
   {
     title: "Javascript Quiz",
