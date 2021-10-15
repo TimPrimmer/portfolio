@@ -2,7 +2,7 @@
 
 ## Description 
 
-My portfolio website remade in react so I showoff my work and potentially get hired!
+My portfolio website remade in react so I can showoff my work and potentially get hired!
 
 ## Built With
 * React
