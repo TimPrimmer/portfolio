@@ -10,7 +10,8 @@ function Header(props) {
   } = props;
 
   useEffect(() => {
-    let tempString = currentCategory.name[0].toUpperCase();
+    let tempString = "Tim Primmer - ";
+    tempString += currentCategory.name[0].toUpperCase();
     tempString += currentCategory.name.substring(1);
     document.title = tempString;
   }, [currentCategory]);
@@ -49,11 +50,37 @@ function Header(props) {
 
   highlightTab(currentCategory);
 
+  const toggleDropdown = () => {
+    document.getElementById("main-nav").classList.toggle("show");
+  }
+
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
   return (
     <header>
-      <h1><a href="./">Tims Portfolio</a></h1>
-      <nav>
-        <ul id="main-nav">
+      <h1><a href="./">TPrimmer</a></h1>
+      <nav id="dropdown">
+        <div className="dropbtn" onClick={toggleDropdown}>
+
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20" rx="10"></rect>
+            <rect y="30" width="100" height="20" rx="10"></rect>
+            <rect y="60" width="100" height="20" rx="10"></rect>
+          </svg>
+        </div>
+        <ul id="main-nav" className="dropdown-content">
           <li>
             <h2>
               <a href="#about-section" id="about-link" className={`${aboutMeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {

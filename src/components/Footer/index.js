@@ -1,5 +1,6 @@
 import React from 'react';
-
+import github from '../../assets/github.svg';
+import linkedin from '../../assets/linkedin.svg';
 
 function Footer(props) {
 
@@ -10,10 +11,12 @@ function Footer(props) {
           <img class="icon" src="./imgs/globe.svg" title="Tim's portfolio" alt="Link to Tim's portfolio" />
         </a> */}
         <a href="https://github.com/TimPrimmer" target="_blank">
-          <img class="icon" src="./imgs/github.svg" title="Tim's GitHub" alt="Link to Tim's GitHub" />
+          {/* <img className="icon" src="./imgs/github.svg" title="Tim's GitHub" alt="Link to Tim's GitHub" /> */}
+          <img className="icon" src={github} title="Tim's GitHub" alt="Link to Tim's GitHub" />
         </a>
+        <a id="email">timprimmer@gmail.com</a>
         <a href="https://www.linkedin.com/in/timprimmer/" target="_blank">
-          <img class="icon" src="./imgs/linkedin.svg" title="Tim's LinkedIn" alt="Link to Tim's LinkedIn" />
+          <img className="icon" src={linkedin} title="Tim's LinkedIn" alt="Link to Tim's LinkedIn" />
         </a>
       </section>
     </footer>
