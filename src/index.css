@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-  --main: #C4C4C4;
+  --main: #000000;
   --secondary: rgba(0, 0, 0, 0.8);
   --secondary-light: rgba(0, 0, 0, 0.5);
+  --light-accent: rgba(255, 255, 255, 0.8);
 }
 
 * {
@@ -12,13 +14,38 @@
   /* adds space when we click on the nav anchor links */
 }
 
+/* * {
+  outline: 2px solid red;
+} */
+
+#root {
+  backdrop-filter: blur(2px);
+  min-height: 100%;
+}
+
+#react-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  transition: margin-left .5s;
+}
+
 body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main);
-  overflow: overlay
+  background-image: url('./assets/imgs/background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  overflow-x: hidden;
+  min-height: 100%;
 }
 
 svg {
@@ -27,15 +54,46 @@ svg {
 
 header li {
   list-style: none;
-  text-align: right;
+  text-align: left;
+  padding: 10px;
 }
 
 header {
   display: flex;
+  position: absolute;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: auto;
+  top: 0;
   align-items: flex-end;
+  background-color: var(--secondary);
+  padding: 10px 0px 10px 0px;
+  width: inherit;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#dim-controller {
+  transition: background-color 0.5s;
+}
+
+.dim {
+  background-color: hsla(0, 0%, 0%, 0.75) !important;
+}
+
+.seethrough {
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0);
+  position: fixed;
+  bottom: 0;
+  pointer-events: none;
+}
+
+
+#spacer {
+  height: 100px;
+  width: 10px;
 }
 
 header a, header a:hover, header a:focus, header a:active {
@@ -44,20 +102,16 @@ header a, header a:hover, header a:focus, header a:active {
 }
 
 header h1 {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 64px;
-  color: var(--secondary);
-  padding-left: 20px;
+  color: var(--light-accent);
+  transition: transform 0.5s ease-in-out;
 }
 
 header h2 a {
   font-size: 36px;
   font-weight: 400;
-  color: var(--secondary);
-}
-
-#main-section{
-  height: 790px;
+  color: var(--light-accent);
 }
 
 .dropbtn {
@@ -67,30 +121,49 @@ header h2 a {
   cursor: pointer;
   text-align: end;
   padding-right: 10px;
+  padding-left: 10px;
 }
 
 .dropbtn svg {
-  fill: var(--secondary);
+  fill: var(--light-accent);
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
+/* The side navigation menu */
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  overflow: auto;
+.sidenav {
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
   z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black*/
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  /* Place content 60px from the top */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.dropdown-content a {
-  color: var(--secondary);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+/* Position and style the close button (top right corner) */
+
+.sidenav .closebtn {
+  color: var(--light-accent);
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+.sidenav li {
+  padding-top: 100px;
 }
 
 .show {
@@ -98,18 +171,24 @@ header h2 a {
   right: 0;
 }
 
+#main-section {
+  overflow: auto !important;
+  width: auto;
+}
+
 #about-section {
   display: flex;
   justify-content: center;
   align-items: center;
   height: inherit;
+  padding-bottom: 2.5rem;
 }
 
 #about-picture-frame {
   background-color: var(--secondary);
   height: 534.84px;
   border-radius: 10px;
-  box-shadow: 0 10px 16px 0 rgb(0 0 0 / 30%), 0 6px 20px 0 rgb(0 0 0 / 19%) !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
   margin: 50px;
 }
 
@@ -127,9 +206,21 @@ header h2 a {
 #about-text {
   font-size: 24px;
   font-weight: 200;
-  color: var(--secondary);
+  color: var(--light-accent);
+  background-color: var(--secondary);
+  border-radius: 10px;
+  padding: 10px 5px 10px 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 
+footer {
+  background-color: var(--secondary);
+  padding: 10px;
+  width: 100%;
+  height: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
 #footer-info {
   display: flex;
@@ -144,13 +235,14 @@ header h2 a {
 
 .icon {
   height: 80px;
-  fill: var(--secondary);
+  fill: var(--light-accent);
 }
 
 #email {
   padding: 0px 50px 0px 50px;
   font-size: 24px;
-  color: var(--secondary-light);
+  font-weight: 200;
+  color: var(--light-accent);
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */

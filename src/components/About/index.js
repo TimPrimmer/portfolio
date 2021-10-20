@@ -1,5 +1,5 @@
 import React from 'react';
-import me from '../../assets/me.png';
+import me from '../../assets/imgs/me.png';
 
 function About(props) {
 

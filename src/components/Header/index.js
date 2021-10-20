@@ -50,62 +50,72 @@ function Header(props) {
 
   highlightTab(currentCategory);
 
-  const toggleDropdown = () => {
-    document.getElementById("main-nav").classList.toggle("show");
+  /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("react-root").style.marginLeft = "250px";
+    document.getElementById("dim-controller").classList.add("dim");
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   }
 
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function (event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
+  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("react-root").style.marginLeft = "0";
+    document.getElementById("dim-controller").classList.remove("dim");
+    document.body.style.backgroundColor = "white";
   }
 
   return (
-    <header>
-      <h1><a href="./">TPrimmer</a></h1>
-      <nav id="dropdown">
-        <div className="dropbtn" onClick={toggleDropdown}>
+    <header id="header-ref">
 
-          <svg viewBox="0 0 100 80" width="40" height="40">
+      <nav id="dropdown">
+        <div className="dropbtn" onClick={openNav}>
+
+          <svg viewBox="0 0 100 80" width="54" height="54">
             <rect width="100" height="20" rx="10"></rect>
             <rect y="30" width="100" height="20" rx="10"></rect>
             <rect y="60" width="100" height="20" rx="10"></rect>
           </svg>
         </div>
-        <ul id="main-nav" className="dropdown-content">
+
+        <ul className="sidenav" id="mySidenav">
+          <a class="closebtn" onClick={closeNav}>&times;</a>
           <li>
             <h2>
-              <a href="#about-section" id="about-link" className={`${aboutMeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
-                setCurrentCategory(categories[0])
-              }}>About Me
+              <a href="#" id="about-link" className={`${aboutMeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
+                setCurrentCategory(categories[0]);
+                closeNav();
+              }}>About
               </a>
             </h2>
           </li>
           <li>
-            <h2><a href="#portfolio-section" id="portfolio-link" className={`${portfolioClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
-              setCurrentCategory(categories[1])
+            <h2><a href="#" id="portfolio-link" className={`${portfolioClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
+              setCurrentCategory(categories[1]);
+              closeNav();
             }}>Portfolio</a></h2>
           </li>
           <li>
-            <h2><a href="#contact-section" id="contact-link" className={`${contactClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
-              setCurrentCategory(categories[2])
+            <h2><a href="#" id="contact-link" className={`${contactClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
+              setCurrentCategory(categories[2]);
+              closeNav();
             }}>Contact</a></h2>
           </li>
           <li>
-            <h2><a href="#resume-section" id="resume-link" className={`${resumeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
-              setCurrentCategory(categories[3])
+            <h2><a href="#" id="resume-link" className={`${resumeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
+              setCurrentCategory(categories[3]);
+              closeNav();
             }}>Resume</a></h2>
           </li>
         </ul>
       </nav>
+
+      <div id="dim-controller" className="seethrough"></div>
+
+      <h1 id="header-name">
+        <a href="./">TPrimmer</a>
+      </h1>
     </header>
   );
 }

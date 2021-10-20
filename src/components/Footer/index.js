@@ -1,6 +1,6 @@
 import React from 'react';
-import github from '../../assets/github.svg';
-import linkedin from '../../assets/linkedin.svg';
+import github from '../../assets/imgs/github.svg';
+import linkedin from '../../assets/imgs/linkedin.svg';
 
 function Footer(props) {
 

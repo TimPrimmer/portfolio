@@ -20,14 +20,15 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
+  
   return (
-    <div>
+    <div id="react-root">
       <Header
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
       />
-      <div className="spacer"></div>
+      <div id="spacer"></div>
       <section id="main-section">
         {(() => {
           switch (currentCategory.name) {
