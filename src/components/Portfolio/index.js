@@ -44,8 +44,8 @@ function Portfolio(props) {
     },
     {
       title: "Book Search",
-      link: "https://timprimmer.github.io/run-buddy/",
-      github: "https://github.com/TimPrimmer/run-buddy",
+      link: "https://young-crag-27225.herokuapp.com/",
+      github: "https://github.com/TimPrimmer/book-search",
       image: imgArr[5],
       description: "A book finding website where users can create accounts and save books. Created using React, GraphQL, MongoDB"
     }
