@@ -2,13 +2,22 @@ import React from 'react';
 
 function Contact(props) {
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let name = document.getElementById("Name").value;
+    let message = document.getElementById("Message").value;
+    // action="mailto:timprimmer@gmail.com?subject=Reaching out to you via your portfolio site" method="post" encType="text/plain"
+    console.log("ahh");
+    window.open(`mailto:timprimmer@gmail.com?subject=${name} - Reaching out to you via your portfolio site&body=${message}`);
+  }
+
   return (
     <div id="contact-section">
 
       <div id="contact-box">
         <h2>Contact me</h2>
 
-        <form id="contact-form" action="mailto:timprimmer@gmail.com?subject=Reaching out to you via your portfolio site" method="post" encType="text/plain">
+        <form id="contact-form" onSubmit={handleSubmit}>
 
           <div className="form-block">
             <label htmlFor="Name" className="form-text">Name</label>
