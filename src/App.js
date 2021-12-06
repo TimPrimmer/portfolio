@@ -8,7 +8,6 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 
-import Lazy from './components/Lazy';
 
 import parktime from "./assets/imgs/parktime.png";
 import petplanit from "./assets/imgs/petplanit.png";
@@ -75,7 +74,6 @@ function App() {
         currentCategory={currentCategory}
       />
       <div id="spacer"></div>
-      <Lazy src={bg1}/>
       <section id="main-section">
         {(() => {
           switch (currentCategory.name) {
