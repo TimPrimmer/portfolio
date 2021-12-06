@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --main: #000000;
   --secondary: rgba(0, 0, 0, 0.8);
   --secondary-light: rgba(0, 0, 0, 0.5);
   --light-accent: rgba(255, 255, 255, 0.8);
+  --dark-accent: rgba(153, 153, 153, 0.8);
 }
 
 * {
@@ -19,7 +21,7 @@
 } */
 
 #root {
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(10px); */
   min-height: 100%;
 }
 
@@ -40,12 +42,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main);
-  background-image: url('./assets/imgs/background2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
   overflow-x: hidden;
   min-height: 100%;
+  transition: background-image 0.2s;
 }
 
 svg {
@@ -89,7 +91,6 @@ header {
   bottom: 0;
   pointer-events: none;
 }
-
 
 #spacer {
   height: 100px;
@@ -174,6 +175,8 @@ header h2 a {
 #main-section {
   overflow: auto !important;
   width: auto;
+  display: flex;
+  justify-content: center;
 }
 
 #about-section {
@@ -211,7 +214,83 @@ header h2 a {
   border-radius: 10px;
   padding: 10px 5px 10px 15px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
+#portfolio-section {
+  display: flex;
+  justify-content: center;
+  color: var(--light-accent);
+}
+
+#portfolio-section a {
+  text-decoration: none;
+  color: var(--light-accent);
+}
+
+#project-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: var(--secondary); */
+  width: 100%;
+  border-radius: 10px;
+}
+
+.proj-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.project-box {
+  width: 426px;
+  height: 280px;
+  margin: 30px 30px 30px 30px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+
+.project-image-box {
+  width: 256px;
+  height: 144px;
+  border-radius: 10px;
+  margin: 10px 85px 0px 85px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project-image-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.project-icon {
+  width: 30px;
+  height: 30px !important;
+}
+
+.project-title-box h3 {
+  font-size: 24px;
+}
+
+.project-text {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 5px;
 }
 
 footer {
@@ -243,6 +322,130 @@ footer {
   font-size: 24px;
   font-weight: 200;
   color: var(--light-accent);
+}
+
+#contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#contact-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 700px;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+  padding: 20px;
+}
+
+#contact-box h2 {
+  text-align: center;
+  color: var(--light-accent);
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+
+.form-block {
+  padding-bottom: 10px;
+}
+
+.form-text {
+  text-align: center;
+  color: var(--light-accent);
+  font-size: 24px;
+}
+
+.form-field input {
+  width: 250px;
+  padding: 5px;
+}
+
+.form-field textarea {
+  width: 500px;
+  height: 200px;
+  resize: none;
+  padding: 5px;
+}
+
+
+.form-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+#resume-section {
+  color: var(--light-accent);
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
+  width: 90%;
+  padding: 20px;
+}
+
+#resume-section h2, #resume-section h4 {
+  text-align: center;
+}
+
+
+#resume-section h4 {
+  text-align: center;
+  font-size: 25px;
+}
+
+#resume-section h2 {
+  padding-bottom: 10px;
+  font-size: 35px;
+}
+
+#resume-qual {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#resume-holder {
+  width: 45%;
+}
+
+#resume-link {
+  height: auto;
+}
+
+#qual-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#other-quals {
+  width: 50%;
+}
+
+.qual-container {
+  width: 50%;
+  font-size: 20px;
+  padding: 20px 0px 20px 0px;
+}
+
+.qual-container li {
+  padding: 5px 0px 5px 0px;
+  color:var(--dark-accent);
+  margin-left: 50px;
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */

@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-
+import bg1 from "../../assets/imgs/background1.jpg";
+import bg2 from "../../assets/imgs/background2.jpg";
+import bg3 from "../../assets/imgs/background3.jpg";
+import bg4 from "../../assets/imgs/background4.jpg";
+import $ from 'jquery';
 
 function Header(props) {
 
@@ -9,12 +13,7 @@ function Header(props) {
     currentCategory
   } = props;
 
-  useEffect(() => {
-    let tempString = "Tim Primmer - ";
-    tempString += currentCategory.name[0].toUpperCase();
-    tempString += currentCategory.name.substring(1);
-    document.title = tempString;
-  }, [currentCategory]);
+
 
   let aboutMeClicked;
   let portfolioClicked;
@@ -80,7 +79,7 @@ function Header(props) {
         </div>
 
         <ul className="sidenav" id="mySidenav">
-          <a class="closebtn" onClick={closeNav}>&times;</a>
+          <a className="closebtn" onClick={closeNav}>&times;</a>
           <li>
             <h2>
               <a href="#" id="about-link" className={`${aboutMeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {

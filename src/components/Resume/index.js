@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../index.css';
-import MyResume from '../../assets/docs/timprimmer_resume.pdf';
+import MyResume from '../../assets/docs/TimPrimmer-Resume.pdf';
 
 
 function Resume(props) {
@@ -63,7 +63,7 @@ function Resume(props) {
               </li>
             </ul>
           </div>
-          <div className="qual-container">
+          <div className="qual-container" id="other-quals">
             <h4>Other Proficiences</h4>
             <ul>
               <li>
@@ -78,7 +78,7 @@ function Resume(props) {
               <li>
                 <p>3ds Max</p>
               </li>
-              <li>
+              {/* <li>
                 <p>&#8205; </p>
               </li>
               <li>
@@ -86,16 +86,20 @@ function Resume(props) {
               </li>
               <li>
                 <p>&#8205; </p>
-              </li>
+              </li> */}
             </ul>
           </div>
         </section>
+        <div id="resume-link">
+          <h2> Download Resume </h2>
+        </div>
       </div>
       <div id="resume-holder">
         <h2>My Resume</h2>
         <iframe id="resume-iframe" src={`${MyResume}#toolbar=0`} title="My resume in pdf format" height="650px" width="100%" />
       </div>
     </div >
+
   );
 }
 
