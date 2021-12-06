@@ -71,6 +71,7 @@ header {
   background-color: var(--secondary);
   padding: 10px 0px 10px 0px;
   width: inherit;
+  width: 100%;
   max-width: 100%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -294,6 +295,9 @@ header h2 a {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: var(--secondary);
   padding: 10px;
   width: 100%;
@@ -318,10 +322,11 @@ footer {
 }
 
 #email {
-  padding: 0px 50px 0px 50px;
+  margin: 0px 50px 0px 50px;
   font-size: 24px;
   font-weight: 200;
   color: var(--light-accent);
+  text-decoration: none;
 }
 
 #contact-section {
@@ -351,6 +356,15 @@ footer {
   color: var(--light-accent);
   font-size: 50px;
   padding-bottom: 20px;
+}
+
+#contact-button {
+  font-size: 25px;
+  background-color: var(--light-accent);
+  color: var(--main);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
 }
 
 .form-block {
@@ -426,6 +440,11 @@ footer {
   height: auto;
 }
 
+#resume-link a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #qual-info {
   display: flex;
   flex-wrap: wrap;
@@ -444,18 +463,137 @@ footer {
 
 .qual-container li {
   padding: 5px 0px 5px 0px;
-  color:var(--dark-accent);
+  color: var(--dark-accent);
   margin-left: 50px;
 }
 
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 
-@media screen and (max-width: 980px) {}
+@media screen and (max-width: 980px) {
+  #about-picture-frame {
+    height: 400px;
+  }
+
+  #about-text {
+    font-size: 20px;
+  }
+
+  #about-text-section {
+    width: 700px !important;
+  }
+
+  #about-section {
+    flex-direction: column;
+  }
+
+  #contact-box {
+    width: 600px;
+  }
+
+  #resume-section {
+    width: 80%;
+  }
+
+  .qual-container {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
+  }
+  
+  .qual-container li {
+    padding: 5px 0px 5px 0px;
+  }
+
+  #other-quals {
+    width: 100%;
+  }
+
+  #resume-section h2 {
+    font-size: 25px;
+  }
+}
 
 /* MEDIA QUERY FOR TABLETS AND SMALLER */
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  #about-text-section {
+    width: 500px !important;
+  }
+
+  .icon {
+    height: 40px;
+    fill: var(--light-accent);
+  }
+
+  #email {
+    margin: 0px 25px 0px 25px;
+    font-size: 20px;
+  }
+
+  #contact-box {
+    width: 400px;
+  }
+
+  .form-field textarea {
+    width: 300px;
+    height: 200px;
+    resize: none;
+    padding: 5px;
+  }
+  .qual-container {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
+  }
+  
+  .qual-container li {
+    padding: 5px 0px 5px 0px;
+  }
+
+  #other-quals {
+    width: 100%;
+  }
+
+  #resume-section h2 {
+    font-size: 25px;
+  }
+}
 
 /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
 
-@media screen and (max-width: 575px) {}
+@media screen and (max-width: 575px) {
+  #about-text-section {
+    width: 300px !important;
+  }
+
+  #header-name a {
+    font-size: 50px;
+  }
+
+  #about-picture-frame {
+    height: 300px;
+  }
+
+  #about-text {
+    font-size: 15px;
+  }
+
+  #about-text-section {
+    width: 300px !important;
+  }
+
+  #contact-box {
+    width: 300px;
+  }
+
+  .form-field textarea {
+    width: 200px;
+    height: 200px;
+    resize: none;
+    padding: 5px;
+  }
+
+  #contact-box h2 {
+    font-size: 40px;
+  }
+}

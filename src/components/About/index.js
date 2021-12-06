@@ -10,7 +10,7 @@ function About(props) {
         {/* <img id="about-picture" src='./imgs/me.png' alt="Tim Primmer" /> */}
       </div>
 
-      <section>
+      <section id="about-text-section">
         <p id="about-text">
           My name is <span className="bold-text">Tim Primmer</span>, I'm a 25 year old geek living in Austin and a recent graduate from the <span className="bold-text">UT Full-Stack</span> coding bootcamp.
           <br /><br />

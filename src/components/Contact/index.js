@@ -8,30 +8,30 @@ function Contact(props) {
       <div id="contact-box">
         <h2>Contact me</h2>
 
-        <form id="contact-form">
+        <form id="contact-form" action="mailto:timprimmer@gmail.com?subject=Reaching out to you via your portfolio site" method="post" encType="text/plain">
 
-          <div class="form-block">
-            <label for="Name" class="form-text">Name</label>
-            <div class="form-field">
+          <div className="form-block">
+            <label htmlFor="Name" className="form-text">Name</label>
+            <div className="form-field">
               <input type="text" id="Name" name="Name" required />
             </div>
           </div>
 
-          <div class="form-block">
-            <label for="Email" class="form-text">Email</label>
-            <div class="form-field">
+          <div className="form-block">
+            <label htmlFor="Email" className="form-text">Email</label>
+            <div className="form-field">
               <input type="email" id="Email" name="Email" required />
             </div>
           </div>
 
-          <div class="form-block">
-            <label for="Message" class="form-text">Message</label>
-            <div class="form-field">
-              <textarea id="Message" name="Message" rows="6" maxlength="3000" required></textarea>
+          <div className="form-block">
+            <label htmlFor="Message" className="form-text">Message</label>
+            <div className="form-field">
+              <textarea id="Message" name="Message" rows="6" maxLength="3000" required></textarea>
             </div>
           </div>
 
-          <div class="form-block">
+          <div className="form-block">
             <button type="submit" id="contact-button">Send Message</button>
           </div>
 

@@ -21,7 +21,6 @@ function Header(props) {
   let resumeClicked;
 
   const highlightTab = (clickedTab) => {
-    console.log(aboutMeClicked);
     switch (clickedTab.name) {
       case "about me": {
         aboutMeClicked = true;
@@ -44,7 +43,6 @@ function Header(props) {
         break;
       }
     }
-    console.log(clickedTab);
   }
 
   highlightTab(currentCategory);

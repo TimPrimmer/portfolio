@@ -91,7 +91,7 @@ function Resume(props) {
           </div>
         </section>
         <div id="resume-link">
-          <h2> Download Resume </h2>
+        <a href={MyResume} download><h2> Download Resume </h2></a>
         </div>
       </div>
       <div id="resume-holder">

@@ -14,7 +14,7 @@ function Footer(props) {
           {/* <img className="icon" src="./imgs/github.svg" title="Tim's GitHub" alt="Link to Tim's GitHub" /> */}
           <img className="icon" src={github} title="Tim's GitHub" alt="Link to Tim's GitHub" />
         </a>
-        <a id="email">timprimmer@gmail.com</a>
+        <a id="email" href="mailto:timprimmer@gmail.com">timprimmer@gmail.com</a>
         <a href="https://www.linkedin.com/in/timprimmer/" target="_blank">
           <img className="icon" src={linkedin} title="Tim's LinkedIn" alt="Link to Tim's LinkedIn" />
         </a>
