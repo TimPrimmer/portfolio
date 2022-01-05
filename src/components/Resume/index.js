@@ -12,7 +12,7 @@ function Resume(props) {
         <h2>My Qualifications</h2>
         <section id="qual-info">
           <div className="qual-container">
-            <h4>Front-End Proficiences</h4>
+            <h4>Front-End Skills</h4>
             <ul>
               <li>
                 <p>Html</p>
@@ -38,7 +38,7 @@ function Resume(props) {
             </ul>
           </div>
           <div className="qual-container">
-            <h4>Back-End Proficiences</h4>
+            <h4>Back-End Skills</h4>
             <ul>
               <li>
                 <p>APIs</p>
@@ -64,7 +64,7 @@ function Resume(props) {
             </ul>
           </div>
           <div className="qual-container" id="other-quals">
-            <h4>Other Proficiences</h4>
+            <h4>Other Skills</h4>
             <ul>
               <li>
                 <p>Adobe Premiere, Photoshop</p>
