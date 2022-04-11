@@ -100,7 +100,7 @@ function Header(props) {
             }}>Contact</a></h2>
           </li>
           <li>
-            <h2><a href="#" id="resume-link" className={`${resumeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
+            <h2><a href="#" id="resumeheader-link" className={`${resumeClicked ? 'active-tab' : 'non-active-tab'}`} onClick={() => {
               setCurrentCategory(categories[3]);
               closeNav();
             }}>Resume</a></h2>

@@ -408,6 +408,7 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px !important;
   width: 90%;
   padding: 20px;
+  margin-bottom: 5px;
 }
 
 #resume-section h2, #resume-section h4 {
@@ -436,16 +437,18 @@ footer {
   width: 45%;
 }
 
-#resume-link {
+#resume-link, #cover-link {
   height: auto;
+  padding: 0px 30px 0px 30px;
 }
 
-#resume-link a {
+#resume-link a, #cover-link a {
   text-decoration: none;
   color: inherit;
 }
 
-#qual-info {
+
+#qual-info, #resume-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -494,22 +497,36 @@ footer {
     width: 80%;
   }
 
-  .qual-container {
+  #resume-qual { /* Changes the layout of the resume page*/
     width: 100%;
-    font-size: 15px;
-    padding: 10px 0px 10px 0px;
+  }
+
+  .qual-container, #other-quals {
+    width: 75%;
+    font-size: 25px;
+    padding: 10px 5px 10px 5px;
+  }
+
+  #resume-holder {
+    width: 90%;
+  }
+
+  #resume-qual h4 {
+    font-size: 35px;
   }
   
   .qual-container li {
     padding: 5px 0px 5px 0px;
   }
 
-  #other-quals {
-    width: 100%;
-  }
 
   #resume-section h2 {
-    font-size: 25px;
+    font-size: 45px;
+  }
+
+  #resume-link h2, #cover-link h2 {
+    font-size: 30px;
+    padding: 20px 5px 20px 5px;
   }
 }
 
@@ -540,7 +557,7 @@ footer {
     resize: none;
     padding: 5px;
   }
-  .qual-container {
+  .qual-container, #other-quals {
     width: 100%;
     font-size: 15px;
     padding: 10px 0px 10px 0px;
@@ -556,6 +573,15 @@ footer {
 
   #resume-section h2 {
     font-size: 25px;
+  }
+
+  #resume-qual h4 {
+    font-size: 20px;
+  }
+
+  #resume-link h2, #cover-link h2 {
+    font-size: 20px;
+    padding: 10px 5px 10px 5px;
   }
 }
 

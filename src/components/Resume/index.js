@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../index.css';
 import MyResume from '../../assets/docs/TimPrimmer-Resume.pdf';
+import MyCover from '../../assets/docs/TimPrimmer-CoverLetter.pdf';
 
 
 function Resume(props) {
@@ -90,9 +91,16 @@ function Resume(props) {
             </ul>
           </div>
         </section>
-        <div id="resume-link">
-        <a href={MyResume} download><h2> Download Resume </h2></a>
-        </div>
+
+        <section id="resume-links">
+          <div id="resume-link">
+            <a href={MyResume} download><h2> Resume Link</h2></a>
+          </div>
+          <div id="cover-link">
+            <a href={MyCover} download><h2> Cover Letter Link</h2></a>
+          </div>
+        </section>
+
       </div>
       <div id="resume-holder">
         <h2>My Resume</h2>
