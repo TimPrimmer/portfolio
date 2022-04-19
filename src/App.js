@@ -40,7 +40,7 @@ function App() {
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
   useEffect(() => {
-    let tempString = "Tim Primmer - ";
+    let tempString = "TP - ";
 
     tempString += currentCategory.name[0].toUpperCase();
     tempString += currentCategory.name.substring(1);
