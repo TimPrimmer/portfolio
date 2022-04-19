@@ -54,7 +54,7 @@ function Resume(props) {
                 <p>MySQL, Sequelize</p>
               </li>
               <li>
-                <p>MongoDV, Mongoose</p>
+                <p>MongoDB, Mongoose</p>
               </li>
               <li>
                 <p>REST</p>
